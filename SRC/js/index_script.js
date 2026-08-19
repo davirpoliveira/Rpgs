@@ -9,7 +9,7 @@ const dado16 = document.getElementById("dado16");
 const dado18 = document.getElementById("dado18");
 const dado20 = document.getElementById("dado20");
 const dado100 = document.getElementById("dado100");
-const forca = document.getElementsByName("forca").value;
+const fora = document.getElementsByName("fora");
 
 
 dado2.addEventListener("click", rollD2);
@@ -23,19 +23,11 @@ dado16.addEventListener("click", rollD16);
 dado18.addEventListener("click", rollD18);
 dado20.addEventListener("click", rollD20);
 dado100.addEventListener("click", rollD100);
-forca.addEventListener("click"), rollD20for;
+forca.addEventListener("click", rollD20for);
 
-document.addEventListener("DOMContentLoaded", function ()); {
-    const form = document.getElementById("meuForm");
-    const campo = document.getElementById("campo");
-}
-    campo.addEventListener("change", function (){
-        if (campo.value.trim() !== "") {
-            form.submit();
-        }
-        }
+
 function rollD20for(){
-    const resultado = Math.floor(Math.random() * 2) + 1 + forca;
+    const resultado = Math.floor(Math.random() * 20) + 1;
     alert("Resultado do dado: " + resultado);
 }
 function rollD2() {
