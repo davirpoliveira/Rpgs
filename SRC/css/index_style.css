@@ -2,8 +2,18 @@
     margin: 0;
       min-height: 100vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
       background-color: #f0f0f0;
 }
-
+#dados{
+  display:flex;
+  flex-direction: row;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid black;
+  width: 100rem
+}
+.directionDados{
+  flex-direction: column;
+  display: flex;
+}
