@@ -9,10 +9,6 @@ const dado16 = document.getElementById("dado16");
 const dado18 = document.getElementById("dado18");
 const dado20 = document.getElementById("dado20");
 const dado100 = document.getElementById("dado100");
-const fora = document.getElementById("fora");
-const input = document.getElementById('meuInput');
-const form = document.getElementById('meuFormulario');
-
 
 dado2.addEventListener("click", rollD2);
 dado4.addEventListener("click", rollD4);
@@ -25,24 +21,6 @@ dado16.addEventListener("click", rollD16);
 dado18.addEventListener("click", rollD18);
 dado20.addEventListener("click", rollD20);
 dado100.addEventListener("click", rollD100);
-fora.addEventListener("click", rollD20for);
-
- // Dispara a cada caractere digitado. Use 'change' se quiser apenas quando o usuário sair do campo.
-  input.addEventListener('input', (event) => {
-    // 1. Captura o valor atual do input
-    const forca = event.target.value; 
-    
-    // 2. Processa a informação (ex: enviar via Fetch API)
-    console.log("Informação capturada:", forca);
-    
-    // Opcional: Enviar os dados para um servidor via API de forma silenciosa
-    // fazerEnvioAutomatico(valor);
-  });
-
-  // Evita que a página recarregue caso o usuário aperte Enter
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-  });
 
 function rollD20for(){
     const resultado = Math.floor(Math.random() * 20) + 1 + forca;

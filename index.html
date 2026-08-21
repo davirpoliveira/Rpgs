@@ -11,65 +11,70 @@
 <body id="background">
     <main class="table">
 
-        <section id="statusPrincipais">
+        <section id="statusPrincipais" class="diagrama">
 
-            <div id="fora" class="status">
+            <div id="fora" class="status hex-top hexagono">
                 <h1>Força</h1>
-                <form id="meuFormulario">
+                <form id="for" class="CenterNoneBorder">
                     <input name="meuInput" type="number">
                 </form>
             </div>
 
-            <div id="ani" class="status">
+            <div id="ani" class="status hexagono hex-left">
                 <h1>Ánimo</h1>
-                <form>
-                    <input type="text">
+                <form  class="CenterNoneBorder">
+                    <input type="number">
                 </form>
             </div>
 
-            <div id="int" class="status">
+            <div id="int" class="status hexagono hex-right">
                 <h1>Intelecto</h1>
-                <form>
-                    <input type="text">
+                <form  class="CenterNoneBorder">
+                    <input type="number">
                 </form>
             </div>
 
-            <div id='car' class="status">
+            <div id='car' class="status hexagono hex-bottom-left">
                 <h1>Carisma</h1>
-                <form>
-                    <input type="text">
+                <form  class="CenterNoneBorder">
+                    <input type="number">
                 </form>
+            </div>
+            <div class="hexagono hex-center">
+                <span>ATRIBUTOS</span>
             </div>
 
-            <div id="vig" class="status">
+            <div id="vig" class="status hexagono hex-bottom-right">
                 <h1>Vigor</h1>
-                <form>
-                    <input type="text">
+                <form  class="CenterNoneBorder">
+                    <input type="number">
                 </form>
             </div>
+        </section>
+        <section id="PVePE">
             <div>
                 <h1>
                     PV
                 </h1>
-                <form>
-                    <input type="text" placeholder="Pontos de Vida">
+                <form class="BarPV">
+                    <input type="number">
                 </form>
             </div>
 
             <div>
                 <h1>
                     PE
-                    </h1>
-                    <form>
-                        <input type="text" placeholder="Pontos de Energia">
-                    </form>
-                </div>
-
-
+                </h1>
+                <form class="BarPE">
+                    <input type="number">
+                </form>
+            </div>
         </section>
-        
-        <section id="adjuntos">
-            
+
+
+
+        <section id="statusAdjuntos">
+
             <div id="defesa">
                 <h1>Defesa</h1>
                 <form>
@@ -78,31 +83,31 @@
             </div>
             <div id="reflexo">
                 <h1>Reflexo</h1>
-                 <form>
+                <form>
                     <input type="text">
                 </form>
             </div>
             <div id="iniciativa">
-                <h1>Iniciativa</h1> 
+                <h1>Iniciativa</h1>
                 <form>
                     <input type="text">
                 </form>
             </div>
             <div id="coragem">
                 <h1>Coragem </h1>
-                 <form>
+                <form>
                     <input type="text">
                 </form>
             </div>
             <div id="precisao">
                 <h1>Precisão </h1>
-                 <form>
+                <form>
                     <input type="text">
                 </form>
             </div>
             <div id="percepcao">
                 <h1>Percepção</h1>
-                 <form>
+                <form>
                     <input type="text">
                 </form>
             </div>
