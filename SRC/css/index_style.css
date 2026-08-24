@@ -1,12 +1,12 @@
-#background{
-    margin: 0;
-      min-height: 100vh;
-      display: flex;
-      background-color: #f0f0f0;
+#background {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  background-color: #f0f0f0;
 }
 
-#dados{
-  display:flex;
+#dados {
+  display: flex;
   flex-direction: row;
   gap: 5rem;
   justify-content: center;
@@ -14,92 +14,215 @@
   border: 10px solid black;
   width: 10rem auto;
 }
-.directionDados{
+
+.directionDados {
   flex-direction: column;
   display: flex;
 }
-#statusAdjuntos{
+
+#statusAdjuntos {
   display: flex;
   flex-direction: row;
 }
+
 .diagrama {
-    position: relative;
-    width: 700px;
-    height: 600px;
-    margin: q0px auto;
-    background: #eee;
+  position: relative;
+  width: 700px;
+  height: 600px;
+  margin: q0px auto;
+  background: #eee;
 }
 
 .hexagono {
-    position: absolute;
+  position: absolute;
 
-    width: 30%;
-    height: 25%;
+  width: 30%;
+  height: 25%;
 
-    background: white;
+  background: white;
 
-    clip-path: polygon(
-        25% 0%,
-        75% 0%,
-        100% 50%,
-        75% 100%,
-        25% 100%,
-        0% 50%
-    );
+  clip-path: polygon(25% 0%,
+      75% 0%,
+      100% 50%,
+      75% 100%,
+      25% 100%,
+      0% 50%);
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hex-top {
-    top: 0;
-    left: 250px;
+  top: 0;
+  left: 250px;
 }
 
 .hex-left {
-    top: 120px;
-    left: 50px;
+  top: 120px;
+  left: 50px;
 }
 
 .hex-right {
-    top: 120px;
-    right: 50px;
+  top: 120px;
+  right: 50px;
 }
 
 .hex-center {
-    top: 215px;
-    left: 250px;
-    background: #ddd;
+  top: 215px;
+  left: 250px;
+  background: #ddd;
 }
 
 .hex-bottom-left {
-    bottom: 1px;
-    left: 30px;
+  bottom: 5rem;
+  left: 6rem;
 }
 
 .hex-bottom-right {
-    bottom: 20px;
-    right: 50px;
+  bottom: 5rem;
+  right: 6rem;
 }
-.CenterNoneBorder input{
-  border:none;
+
+.CenterNoneBorder input {
+  border: none;
   outline: none;
   text-align: center;
   background-color: transparent;
   box-shadow: none;
   font-size: 1rem;
+  width: 100%;
+  justify-content: center;
 }
-.BarPV input{
+
+.BarPV input {
   border: solid red;
   background-color: lightcoral;
-  color:white;
+  color: white;
   text-align: center;
 }
-.BarPE input{
+
+.BarPE input {
   border: solid blue;
   background-color: lightblue;
-  color:white;
+  color: white;
   text-align: center;
 }
+
+#PVePE {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rem;
+  justify-content: center;
+}
+
+.barraPV {
+  width: 360px;
+  height: 20px;
+  position: relative;
+  margin: 20px;
+}
+
+.fundoPV {
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+.preenchimentoPV {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #ff4d4d;
+  transition: width 0.2s;
+}
+
+.textoPV {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 15px;
+}
+
+.barraPE {
+  width: 360px;
+  height: 20px;
+  position: relative;
+  margin: 20px;
+}
+
+.fundoPE {
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+.preenchimentoPE {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: blue;
+  transition: width 0.2s;
+}
+
+.textoPE {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+
+.setas {
+  display: flex;
+  margin-left: 4rem;
+  gap: 20px;
+}
+.table {
+    display: flex;
+    flex-direction: row;
+
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+#statusAdjuntos {
+  display: flex;
+  flex-direction: column;
+}
+.statusAd {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
