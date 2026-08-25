@@ -13,6 +13,7 @@
   align-items: center;
   border: 10px solid black;
   width: 10rem auto;
+  height: 20% auto;
 }
 
 #statusAdjuntos {
@@ -30,7 +31,7 @@
   background: #000000;
   justify-content: center;
   align-items: center;
-  border:1 px solid black;
+  border: 1 px solid black;
 }
 
 .hexagono {
@@ -129,7 +130,7 @@
   width: 100%;
   height: 100%;
   background: black;
-  border :1% solid white;
+  border: 1% solid white;
 }
 
 .preenchimentoPV {
@@ -205,11 +206,13 @@ button {
   margin-left: 4rem;
   gap: 20px;
 }
+
 .table {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
 }
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -217,69 +220,81 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 #statusAdjuntos {
   display: flex;
   flex-direction: column;
 }
+
 .statusAd {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 10px;
 }
-.triangulo {
-    width: 0;
-    height: 0;
-    
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 80px solid black;
+
+.triangulo1 {
+  width: 1px;
+  height: 1%;
+
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 50px solid rgb(255, 234, 0);
 }
+
+.triangulo2 {
+  width: 0;
+  height: 1%;
+
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 50px solid rgba(2, 215, 37, 0.87);
+}
+
 #textoDado {
-    position: absolute;
-    top: 59rem;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-weight: bold;
+  position: absolute;
+  top: 58rem;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
 }
 
 .direcaoDados {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 }
+
 .directionDados {
   flex-direction: row;
   display: flex;
 
 }
-.losango{
-       width: 4rem;
-    height: 5rem;
-    background: #8e2de2;
 
-    clip-path: polygon(
-        50% 0%,
-        100% 25%,
-        100% 75%,
-        50% 100%,
-        0% 75%,
-        0% 25%
-    );
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.quadrado{
-  width: 4rem;
-  height: 4rem;
+.losango {
+  width: 1px;
+  height: -1px;
   background: #8e2de2;
 
-  clip-path: polygon(
-      0% 0%,
+  clip-path: polygon(50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quadrado {
+  width: 1rem;
+  height: 3rem;
+  background: #02e9fe;
+
+  clip-path: polygon(0% 0%,
       100% 0%,
       100% 100%,
-      0% 100%
-  );
+      0% 100%);
 }
