@@ -209,8 +209,7 @@ button {
 
 .table {
   display: flex;
-  flex-direction: row;
-
+  flex-direction: column;
 }
 
 body {
@@ -297,4 +296,12 @@ body {
       100% 0%,
       100% 100%,
       0% 100%);
+}
+
+#header {
+ border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
 }
