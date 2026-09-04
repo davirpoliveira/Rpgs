@@ -1,44 +1,84 @@
+/* ===== <body id="background"> ===== */
 #background {
   margin: 0;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   background-color: #ffffff;
 }
 
-#dados {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: row;
-  gap: 5rem;
-  justify-content: center;
-  align-items: center;
-  border: 10px solid black;
-  width: 10rem auto;
-  height: 20% auto;
+  flex-direction: column;
 }
 
-#statusAdjuntos {
+/* ===== <main class="table"> ===== */
+.table {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+/* ===== <section id="Row"> - layout geral: cabeçalho em cima,
+   diagrama+PV/PE numa coluna, status adjuntos do lado ===== */
+#Row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "header   header"
+    "diagrama adjuntos"
+    "pvpe     adjuntos";
+  gap: 1rem;
+  align-items: start;
+}
+
+/* ===== <section id="header"> (dados do personagem) ===== */
+#header {
+  grid-area: header;
   border: 1px solid black;
   padding: 10px;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
 }
 
+/* ===== <form class="CenterNoneBorder2"> (nome, jogador, vontade, origem) ===== */
+.CenterNoneBorder2 input {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  text-align: center;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+/* ===== <article id="statusPrincipais" class="diagrama"> ===== */
 .diagrama {
+  grid-area: diagrama;
   position: relative;
-  width: 35%;
+  width: 30rem;
   height: 30rem;
-  margin: q0px auto;
+  margin: 0;
   background: #000000;
   justify-content: center;
   align-items: center;
-  border: 1 px solid black;
+  border: 1px solid black;
 }
 
 .hexagono {
   position: absolute;
 
   width: 25%;
-  height: 25%;
+  height: 20%;
   justify-content: center;
 
   background: white;
@@ -71,17 +111,17 @@
   right: 1%;
 }
 
+.hex-bottom-left {
+  bottom: 1%;
+  left: 10%;
+}
+
 .hex-center {
   top: 34%;
   left: 28%;
   width: 40%;
-  height: 40%;
+  height: 35%;
   background: #ddd;
-}
-
-.hex-bottom-left {
-  bottom: 1%;
-  left: 10%;
 }
 
 .hex-bottom-right {
@@ -89,6 +129,7 @@
   right: 10%;
 }
 
+/* ===== <form class="CenterNoneBorder"> (inputs dos atributos: FOR, Ânimo, INT, CAR, VIG) ===== */
 .CenterNoneBorder input {
   border: none;
   outline: none;
@@ -99,39 +140,33 @@
   width: 100%;
   justify-content: center;
 }
-.CenterNoneBorder2 input {
-  border:none;
-  border-bottom: 1px solid black;
-  outline: none;
-  text-align: center;
-  background-color: transparent;
-  box-shadow: none;
-  font-size: 1rem;
-  width: 100%;
-  justify-content: center;
-}
 
-.BarPV input {
-  border: solid red;
-  background-color: lightcoral;
-  color: white;
-  text-align: center;
-}
-
-.BarPE input {
-  border: solid blue;
-  background-color: lightblue;
-  color: white;
-  text-align: center;
-}
-
-#PVePE {
+/* ===== <div class="StatusStlye"> (rótulo dos atributos) ===== */
+.StatusStlye {
   display: flex;
   flex-direction: column;
-  margin-left: 20rem;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  gap: 4px;
+  line-height: 1.1rem;
 }
 
+.StatusStlye p,
+.StatusStlye h1,
+.StatusStlye h2,
+.StatusStlye span {
+  margin: 0;
+}
+
+/* ===== <article id="blocoPvPe"> (agrupa PV e PE numa coluna só) ===== */
+#blocoPvPe {
+  grid-area: pvpe;
+}
+
+/* ===== <div class="barraPV"> (barra de PV) ===== */
 .barraPV {
   width: 360px;
   height: 20px;
@@ -143,7 +178,7 @@
   width: 100%;
   height: 100%;
   background: black;
-  border: 1% solid white;
+  border: 1px solid white;
 }
 
 .preenchimentoPV {
@@ -171,11 +206,14 @@
   color: white;
 }
 
-button {
-  margin: 5px;
-  padding: 8px 15px;
+/* ===== <section class="setas"> (botões de +/- de PV e PE) ===== */
+.setas {
+  display: flex;
+  margin-left: 4rem;
+  gap: 20px;
 }
 
+/* ===== <div class="barraPE"> (barra de PE) ===== */
 .barraPE {
   width: 360px;
   height: 20px;
@@ -214,26 +252,9 @@ button {
   color: white;
 }
 
-.setas {
-  display: flex;
-  margin-left: 4rem;
-  gap: 20px;
-}
-
-.table {
-  display: flex;
-  flex-direction: column;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
+/* ===== <section id="statusAdjuntos"> (defesa, reflexo, iniciativa...) ===== */
 #statusAdjuntos {
+  grid-area: adjuntos;
   display: flex;
   flex-direction: column;
 }
@@ -243,6 +264,18 @@ body {
   flex-direction: row;
   align-items: center;
   margin-bottom: 10px;
+}
+
+/* ===== <section id="dados"> (D2, D4, D6...) ===== */
+#dados {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid black;
+  width: auto;
+  height: 20%;
 }
 
 .triangulo1 {
@@ -271,21 +304,9 @@ body {
   font-weight: bold;
 }
 
-.direcaoDados {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.directionDados {
-  flex-direction: row;
-  display: flex;
-
-}
-
 .losango {
-  width: 1px;
-  height: -1px;
+  width: 3rem;
+  height: 3rem;
   background: #8e2de2;
 
   clip-path: polygon(50% 0%,
@@ -311,31 +332,51 @@ body {
       0% 100%);
 }
 
-#header {
- border: 1px solid black;
-  padding: 10px;
-  text-align: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  display: flex;
+.directionDados {
   flex-direction: row;
-  box-sizing: border-box;
+  display: flex;
 }
-.StatusStlye{
+
+/* ===================================================================
+   ABAIXO: regras que existiam no CSS mas NÃO encontrei uso no HTML.
+   Deixei no fim para você revisar - pode ser código morto ou pode ser
+   que o seletor não bate certinho com o HTML (ex: #row vs id="Row").
+   =================================================================== */
+
+/* Não encontrei <button> no HTML (os botões de +/- são <div onclick=...>) */
+button {
+  margin: 5px;
+  padding: 8px 15px;
+}
+
+/* Não encontrei .BarPV/.BarPE aplicadas em nenhum elemento */
+.BarPV input {
+  border: solid red;
+  background-color: lightcoral;
+  color: white;
+  text-align: center;
+}
+
+.BarPE input {
+  border: solid blue;
+  background-color: lightblue;
+  color: white;
+  text-align: center;
+}
+
+/* Não encontrei #PVePE no HTML */
+#PVePE {
   display: flex;
   flex-direction: column;
+  margin-left: 20rem;
   justify-content: center;
+}
+
+/* Não encontrei .direcaoDados no HTML (só ".directionDados", com nome diferente) */
+.direcaoDados {
+  display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  height: 100%;
-  width: 100%;
-  gap: Xpx;
- line-height: 1.1rem;
+  margin-top: 20px;
 }
-.StatusStlye p,
-.StatusStlye h1,
-.StatusStlye h2,
-.StatusStlye span{
-  margin: 0;
-}
+
+/* A regra de layout de #Row agora está lá no topo do arquivo, logo após body { }. */
